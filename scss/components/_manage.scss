@@ -1,0 +1,70 @@
+@use "../util" as u;
+
+.manage {
+  position: relative;
+  padding: u.rem(30) 0;
+
+  &__box {
+    @media (width >= u.em(1140)) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: u.rem(256);
+      height: u.rem(246);
+      overflow: hidden;
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      position: absolute;
+      top: 1px;
+      right: 0px;
+      width: u.rem(159);
+      height: u.rem(159);
+      overflow: hidden;
+      padding: u.rem(15);
+    }
+
+    @media (max-width: u.em(736)) and (min-width: u.rem(375)) {
+      max-width: u.rem(483);
+      margin: 0 auto;
+    }
+
+    position: relative;
+    height: u.rem(170);
+    padding: u.rem(20);
+    margin: 0 auto;
+    border-radius: var(--border-rad-10);
+    background-color: #f9f7fa;
+  }
+
+  &__img {
+    @media (width >= u.em(1140)) {
+      width: u.rem(300);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      width: u.rem(200);
+    }
+
+    width: u.rem(320);
+  }
+
+  &__heading {
+    @media (width >= u.em(1140)) {
+      span {
+        display: block;
+        font-size: u.rem(28);
+      }
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      font-size: u.rem(17);
+    }
+
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: 600;
+    letter-spacing: -1.1px;
+  }
+}

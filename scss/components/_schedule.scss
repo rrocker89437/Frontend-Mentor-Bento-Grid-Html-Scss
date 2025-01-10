@@ -1,0 +1,112 @@
+@use "../util" as u;
+
+.schedule {
+  position: relative;
+  padding-bottom: u.rem(30);
+
+  @media (width >= u.em(1140)) {
+    padding-top: u.rem(20);
+  }
+
+  @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+    padding-top: u.rem(20);
+  }
+
+  &__box {
+    @media (width >= u.em(1140)) {
+      position: absolute;
+      left: 0;
+      height: u.rem(576);
+      width: u.rem(256);
+      overflow: hidden;
+      display: inline;
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      position: absolute;
+      left: 0;
+      height: u.rem(405);
+      width: u.rem(345);
+      overflow: hidden;
+      display: inline;
+      padding: u.rem(20);
+    }
+
+    @media (max-width: u.em(736)) and (min-width: u.rem(375)) {
+      max-width: u.rem(483);
+      margin: 0 auto;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: u.rem(470);
+    padding: u.rem(34) u.rem(20) u.rem(34) u.rem(20);
+    border-radius: var(--border-rad-10);
+    background-color: var(--c-purple-light);
+  }
+
+  &__heading {
+    @media (width >= u.em(1140)) {
+      margin-left: u.rem(15);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      text-align: center;
+    }
+
+    padding-bottom: u.rem(25);
+    font-weight: 600;
+    letter-spacing: -1.1px;
+
+    &-break {
+      @media (width >= u.em(1140)) {
+        display: block;
+      }
+    }
+  }
+
+  &__img {
+    @media (width >= u.em(1140)) {
+      width: u.rem(350);
+      margin-left: u.rem(15);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      width: u.rem(250);
+      margin: 0 auto;
+    }
+
+    width: 100%;
+    max-width: u.rem(303);
+    height: auto;
+  }
+
+  &__description {
+    @media (width >= u.em(1140)) {
+      text-align: start;
+      padding-top: u.rem(35);
+      padding-left: u.rem(18);
+    }
+
+    padding-top: u.rem(25);
+    text-align: center;
+    font-size: u.rem(20);
+    font-weight: 500;
+    letter-spacing: -1.1px;
+
+    &-break {
+      @media (width >= u.em(1140)) {
+        display: inline;
+      }
+
+      display: block;
+    }
+    @media (width >= u.em(1140)) {
+      &-break-desktop {
+        display: block;
+      }
+    }
+  }
+}

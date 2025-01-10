@@ -1,0 +1,65 @@
+@use "../util" as u;
+
+.ai {
+  position: relative;
+  padding-bottom: u.rem(30);
+
+  &__box {
+    @media (width >= u.em(1140)) {
+      position: absolute;
+      left: 0;
+      height: u.rem(386);
+      width: u.rem(256);
+      margin-top: u.rem(-176);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      position: absolute;
+      left: 1px;
+      height: u.rem(360);
+      width: u.rem(344);
+      overflow: hidden;
+      padding: u.rem(20);
+    }
+
+    @media (max-width: u.em(736)) and (min-width: u.rem(375)) {
+      max-width: u.rem(483);
+      margin: 0 auto;
+    }
+
+    height: u.rem(360);
+    margin: 0 auto;
+    padding: u.rem(25) u.rem(20) u.rem(25) u.rem(20);
+    border-radius: var(--border-rad-10);
+    background-color: var(--c-yellow-dark);
+  }
+
+  &__heading {
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      text-align: center;
+    }
+
+    padding-bottom: u.rem(15);
+    font-size: u.rem(30);
+    font-weight: 600;
+    letter-spacing: -1.1px;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__img {
+    @media (width >= u.em(1140)) {
+      padding-top: u.rem(0);
+      padding-bottom: u.rem(25);
+      width: u.rem(220);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      margin: 0 auto;
+    }
+
+    width: u.rem(230);
+  }
+}

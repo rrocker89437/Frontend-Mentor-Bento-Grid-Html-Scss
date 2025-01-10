@@ -1,0 +1,73 @@
+@use "../util" as u;
+
+.create {
+  position: relative;
+  padding-bottom: u.rem(30);
+
+  @media (width >= u.em(1140)) {
+    padding-top: u.rem(20);
+  }
+
+  &__box {
+    @media (width >= u.em(1140)) {
+      position: absolute;
+      left: 0;
+      height: u.rem(400);
+      width: u.rem(256);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      height: u.rem(159);
+      width: u.rem(344);
+      padding: u.rem(20);
+    }
+
+    @media (max-width: u.em(736)) and (min-width: u.rem(375)) {
+      max-width: u.rem(483);
+      margin: 0 auto;
+    }
+
+    height: u.rem(230);
+    margin: 0 auto;
+    padding: u.rem(25) u.rem(20) u.rem(25) u.rem(20);
+    border-radius: var(--border-rad-10);
+    background-color: var(--c-yellow-light);
+  }
+
+  &__heading {
+    @media (width >= u.em(1140)) {
+      padding-top: u.rem(40);
+
+      &-break {
+        display: block;
+      }
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      font-size: u.rem(25);
+      text-align: center;
+      padding-bottom: u.rem(10);
+    }
+
+    padding-bottom: u.rem(20);
+    font-size: u.rem(30);
+    font-weight: 600;
+    letter-spacing: -1.1px;
+
+    &-color {
+      color: var(--c-purple-dark);
+    }
+  }
+
+  &__img {
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      width: u.rem(150);
+      margin: 0 auto;
+    }
+
+    width: u.rem(200);
+  }
+}

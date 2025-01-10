@@ -1,0 +1,82 @@
+@use "../util" as u;
+
+.audience {
+  position: relative;
+  padding-bottom: u.rem(30);
+
+  &__box {
+    @media (width >= u.em(1140)) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: u.rem(256);
+      height: u.rem(210);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: u.rem(175);
+      width: u.rem(160);
+      padding: u.rem(15);
+    }
+
+    @media (max-width: u.em(736)) and (min-width: u.rem(375)) {
+      max-width: u.rem(483);
+      margin: 0 auto;
+    }
+
+    height: u.rem(220);
+    margin: 0 auto;
+    position: relative;
+    padding: u.rem(20);
+    border-radius: var(--border-rad-10);
+    background-color: var(--c-white);
+  }
+
+  &__heading {
+    @media (width >= u.em(1140)) {
+      font-size: u.rem(56);
+      padding-bottom: u.rem(3);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      font-size: u.rem(30);
+      padding-bottom: u.rem(10);
+    }
+
+    padding-bottom: u.rem(20);
+    font-size: u.rem(44);
+    font-weight: 600;
+    letter-spacing: -1.1px;
+  }
+
+  &__description {
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      font-size: u.rem(12);
+      padding-left: u.rem(4);
+    }
+
+    font-size: u.rem(18);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+  }
+
+  &__img {
+    @media (width >= u.em(1140)) {
+      padding-bottom: u.rem(7);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      width: u.rem(130);
+      position: absolute;
+      left: 15px;
+    }
+
+    width: u.rem(180);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+}

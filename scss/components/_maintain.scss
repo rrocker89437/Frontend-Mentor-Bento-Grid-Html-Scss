@@ -1,0 +1,57 @@
+@use "../util" as u;
+
+.maintain {
+  position: relative;
+  padding-bottom: u.rem(30);
+
+  &__box {
+    @media (width >= u.em(1140)) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: u.rem(256);
+      height: u.rem(246);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      position: absolute;
+      top: 1px;
+      right: 0px;
+      width: u.rem(160);
+      height: u.rem(159);
+      padding: u.rem(15);
+    }
+
+    @media (max-width: u.em(736)) and (min-width: u.rem(375)) {
+      max-width: u.rem(483);
+      margin: 0 auto;
+    }
+
+    height: u.rem(218);
+    padding: u.rem(20);
+    padding-bottom: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: var(--border-rad-10);
+    background-color: var(--c-yellow-dark);
+  }
+
+  &__heading {
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      font-size: u.rem(16);
+    }
+
+    font-size: u.rem(26);
+    font-weight: 600;
+    letter-spacing: -1.1px;
+    padding-bottom: u.rem(15);
+  }
+
+  &__img {
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      width: u.rem(150);
+    }
+
+    width: u.rem(220);
+  }
+}
