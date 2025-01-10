@@ -1,0 +1,80 @@
+@use "../util" as u;
+
+.grow {
+  position: relative;
+  padding-bottom: u.rem(30);
+
+  &__box {
+    @media (width >= u.em(1140)) {
+      position: absolute;
+      left: 0;
+      height: u.rem(210);
+      width: u.rem(535);
+      flex-direction: row;
+      padding: u.rem(20);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      position: absolute;
+      left: 0;
+      height: u.rem(175);
+      width: u.rem(160);
+      flex-direction: column;
+      padding: u.rem(20);
+      overflow: hidden;
+    }
+
+    @media (max-width: u.em(736)) and (min-width: u.rem(375)) {
+      max-width: u.rem(483);
+      margin: 0 auto;
+    }
+
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content(30px);
+    align-items: center;
+    height: u.rem(370);
+    border-radius: var(--border-rad-10);
+    background-color: var(--c-purple-dark);
+  }
+
+  &__img {
+    @media (width >= u.em(1140)) {
+      width: u.rem(190);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      width: u.rem(120);
+      padding: u.rem(65) 0 0 0;
+      margin-left: u.rem(15);
+    }
+
+    padding: u.rem(25) 0;
+    width: u.rem(230);
+  }
+
+  &__heading {
+    @media (width >= u.em(1140)) {
+      text-align: start;
+      font-size: u.rem(30);
+      padding-left: u.rem(40);
+    }
+
+    @media (max-width: u.em(1139)) and (min-width: u.rem(737)) {
+      font-size: u.rem(15);
+      text-align: start;
+      position: absolute;
+      left: 20px;
+    }
+
+    color: var(--c-white);
+    font-size: u.rem(30);
+    font-weight: 500;
+    letter-spacing: -1.1px;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+}
